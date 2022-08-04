@@ -1,0 +1,14 @@
+Documentation http://swapi.co/documentation
+
+- проверить, принадлежит ли фильму Luke Skywalker и его планета.
+
+let ab = JSON.parse (responseBody);
+
+
+pm.test("Luke Skywalker", function () {
+    pm.expect(ab.characters).to.include("https://swapi.dev/api/people/1/");
+});
+
+pm.test("Tatooine", function () {
+    pm.expect(ab.planets).to.include("https://swapi.dev/api/planets/1/");
+});
