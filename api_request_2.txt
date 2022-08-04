@@ -1,0 +1,12 @@
+Documentation http://swapi.co/documentation
+
+- по его homeworld найти планету, проверить ее name (Tatooine) и population (200000).
+
+var jsonData = pm.response.json();
+
+pm.test("Check planet name Tatooine", function () {
+    pm.expect(jsonData.name).to.eql("Tatooine");
+})
+pm.test("Check planet population 200000", function () {
+    pm.expect(jsonData.population).to.eql("200000");
+})
