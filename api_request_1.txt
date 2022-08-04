@@ -1,0 +1,8 @@
+Documentation http://swapi.co/documentation
+
+- поиск человека с id=1 (Luke Skywalker).
+
+pm.test("Check if name Luke Skywalker", function () {
+    var jsonDataName = pm.response.json();
+    pm.expect(jsonDataName.name).to.eql("Luke Skywalker");
+})
