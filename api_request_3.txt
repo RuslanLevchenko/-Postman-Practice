@@ -1,0 +1,9 @@
+Documentation http://swapi.co/documentation
+
+- для первого в списке этой планеты фильма проверить title (Attack of the Clones);
+
+let qw=JSON.parse(responseBody);
+
+pm.test("Check film title Attack of the Clones", function () {
+    pm.expect(qw.title).to.eql("Attack of the Clones");
+})
